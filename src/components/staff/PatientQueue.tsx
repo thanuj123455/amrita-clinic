@@ -197,8 +197,9 @@ const PatientQueue: React.FC = () => {
                                         </button>
                                     </td>
                                 </tr>
-                            </tbody>
-                        </table>
+                            ))}
+                        </tbody>
+                    </table>
                     {queue.length === 0 && <p className="text-center py-4 text-brand-text">No confirmed appointments for today.</p>}
                 </div>
             </div>

@@ -43,13 +43,13 @@ export const StudentHistory: React.FC = () => {
 
     return (
         <div className="space-y-6">
-            <h1 className="text-3xl font-bold text-gray-800">Medical History</h1>
+            <h1 className="text-3xl font-bold text-black">Medical History</h1>
 
             {visits.length === 0 ? (
                  <div className="bg-white rounded-xl shadow p-6 text-center">
                     <FileText size={48} className="mx-auto text-gray-300 mb-4" />
-                    <h2 className="text-xl font-semibold text-gray-700">No History Found</h2>
-                    <p className="text-brand-text mt-2">You have no past visit records at the clinic.</p>
+                    <h2 className="text-xl font-semibold text-black">No History Found</h2>
+                    <p className="text-black mt-2">You have no past visit records at the clinic.</p>
                 </div>
             ) : (
                 <div className="space-y-8">
@@ -59,27 +59,27 @@ export const StudentHistory: React.FC = () => {
                             <div key={visit.visitId} className="bg-white rounded-xl shadow-lg overflow-hidden">
                                 <div className="p-6 bg-brand-primary-light border-b-2 border-brand-primary">
                                     <div className="flex justify-between items-center">
-                                        <h2 className="text-xl font-bold text-brand-primary-dark flex items-center gap-2">
-                                            <Calendar size={20} />
+                                        <h2 className="text-xl font-bold text-black flex items-center gap-2">
+                                            <Calendar size={20} className="text-brand-primary" />
                                             Visit on {new Date(visit.checkinTime).toLocaleDateString()}
                                         </h2>
-                                        <p className="text-sm font-medium text-brand-text flex items-center gap-2">
+                                        <p className="text-sm font-medium text-black flex items-center gap-2">
                                             <User size={16} /> Dr. {getDoctorName(visit.doctorId)}
                                         </p>
                                     </div>
                                 </div>
-                                <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-6 text-black">
                                     <div>
-                                        <h3 className="font-semibold text-gray-700 mb-2 flex items-center gap-2"><Stethoscope size={18} /> Diagnosis & Treatment</h3>
+                                        <h3 className="font-semibold text-black mb-2 flex items-center gap-2"><Stethoscope size={18} /> Diagnosis & Treatment</h3>
                                         <div className="p-4 bg-gray-50 rounded-lg text-sm space-y-3">
-                                            <p><strong className="text-brand-text">Symptoms:</strong> {visit.symptoms}</p>
-                                            <p><strong className="text-brand-text">Diagnosis:</strong> {visit.diagnosis}</p>
-                                            <p><strong className="text-brand-text">Treatment:</strong> {visit.treatmentProvided}</p>
-                                            {visit.followupDate && <p><strong className="text-brand-text">Follow-up:</strong> {new Date(visit.followupDate).toLocaleDateString()}</p>}
+                                            <p><strong className="text-black">Symptoms:</strong> {visit.symptoms}</p>
+                                            <p><strong className="text-black">Diagnosis:</strong> {visit.diagnosis}</p>
+                                            <p><strong className="text-black">Treatment:</strong> {visit.treatmentProvided}</p>
+                                            {visit.followupDate && <p><strong className="text-black">Follow-up:</strong> {new Date(visit.followupDate).toLocaleDateString()}</p>}
                                         </div>
                                     </div>
                                     <div>
-                                        <h3 className="font-semibold text-gray-700 mb-2 flex items-center gap-2"><Thermometer size={18} /> Vitals</h3>
+                                        <h3 className="font-semibold text-black mb-2 flex items-center gap-2"><Thermometer size={18} /> Vitals</h3>
                                         <ul className="list-disc list-inside p-4 bg-gray-50 rounded-lg text-sm space-y-1">
                                             <li><strong>Temperature:</strong> {visit.vitals.temperature} °F</li>
                                             <li><strong>Pulse:</strong> {visit.vitals.pulse} BPM</li>
@@ -87,15 +87,15 @@ export const StudentHistory: React.FC = () => {
                                         </ul>
                                     </div>
                                     <div className="md:col-span-2">
-                                        <h3 className="font-semibold text-gray-700 mb-2 flex items-center gap-2"><Pill size={18} /> Prescriptions</h3>
+                                        <h3 className="font-semibold text-black mb-2 flex items-center gap-2"><Pill size={18} /> Prescriptions</h3>
                                         {visitPrescriptions.length > 0 ? (
                                             <div className="overflow-x-auto border rounded-lg">
                                                 <table className="w-full text-sm">
                                                     <thead className="bg-gray-100">
                                                         <tr>
-                                                            <th className="p-3 text-left font-medium text-gray-600">Medicine</th>
-                                                            <th className="p-3 text-left font-medium text-gray-600">Dosage</th>
-                                                            <th className="p-3 text-left font-medium text-gray-600">Duration</th>
+                                                            <th className="p-3 text-left font-medium text-black">Medicine</th>
+                                                            <th className="p-3 text-left font-medium text-black">Dosage</th>
+                                                            <th className="p-3 text-left font-medium text-black">Duration</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -110,7 +110,7 @@ export const StudentHistory: React.FC = () => {
                                                 </table>
                                             </div>
                                         ) : (
-                                            <p className="p-4 bg-gray-50 rounded-lg text-sm text-brand-text">No prescriptions were issued for this visit.</p>
+                                            <p className="p-4 bg-gray-50 rounded-lg text-sm text-black">No prescriptions were issued for this visit.</p>
                                         )}
                                     </div>
                                 </div>

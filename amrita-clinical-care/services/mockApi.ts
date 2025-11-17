@@ -1,4 +1,3 @@
-
 import {
   Student, Staff, Appointment, SickLeaveRequest, SymptomCheck, MedicineRequest, PatientVisit,
   Prescription, Bed, MedicineInventory, StaffSchedule, Notification, Broadcast,
@@ -9,7 +8,7 @@ import jsPDF from 'jspdf';
 
 // --- MOCK DATABASE ---
 let students: Student[] = [
-  { studentId: 1, name: 'Ravi Kumar', rollNumber: 'CB.EN.U4CSE19001', department: 'Computer Science', phone: '9876543210', email: 'ravi@amrita.edu', allergies: 'Peanuts', chronicConditions: 'Asthma', vaccinationRecords: 'Fully vaccinated (COVID-19)' },
+  { studentId: 1, name: 'Prem Reddy', rollNumber: 'BL.EN.U4AIE22166', department: 'Computer Science', phone: '9876543210', email: 'prem.r@amrita.edu', allergies: 'Peanuts', chronicConditions: 'Asthma', vaccinationRecords: 'Fully vaccinated (COVID-19)' },
   { studentId: 2, name: 'Priya Sharma', rollNumber: 'CB.EN.U4ECE19002', department: 'Electronics', phone: '8765432109', email: 'priya@amrita.edu', allergies: 'None', chronicConditions: 'None', vaccinationRecords: 'Fully vaccinated (COVID-19)' },
   { studentId: 3, name: 'Arjun Verma', rollNumber: 'CB.EN.U4MECH19003', department: 'Mechanical', phone: '7654321098', email: 'arjun@amrita.edu', allergies: 'Dust', chronicConditions: 'None', vaccinationRecords: 'Fully vaccinated (COVID-19)' },
 ];
