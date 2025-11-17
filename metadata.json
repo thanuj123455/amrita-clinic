@@ -1,0 +1,5 @@
+{
+  "name": "Amrita Clinical Care",
+  "description": "A comprehensive clinical care application for the Amrita college campus, serving students and clinic staff. It includes appointment booking, symptom checking, sick-leave requests, patient management, and administrative dashboards.",
+  "requestFramePermissions": []
+}
